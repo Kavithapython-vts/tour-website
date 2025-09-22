@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Flight Tickets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .nav-item{
+        color:black;
+        font-weight: bold;
+    }
+    .nav-link .active{
+        color:black;
+        text-decoration:none;
+    }
+    .flight-banner {
+      background: url('images/transport-3545973_640.png') no-repeat center center/cover;
+      color: white;
+      padding: 60px 0;
+      position: relative;
+    }
+    .search-box { 
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: black;
+    }
+    .search-box input, 
+    .search-box select {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 8px;
+      font-size: 14px;
+    }
+    .search-box button {
+      background: #2f2eff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 2px;
+    }
+    .promo-section {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .promo-section img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .promo-section h5 {
+      font-weight: bold;
+    }
+    .promo-section .discount-btn {
+      background: #2f2eff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 8px;
+    }
+    .divider {
+      border-left: 2px solid #ccc;
+      height: 100%;
+    }
+    .destination-card {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+      background: #fff;
+    }
+    .destination-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .destination-card p {
+      margin: 0;
+      padding: 10px;
+      font-weight: 500;
+    }
+    .footer {
+      background: #5b4b4b;
+      color: #fff;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+    .footer h6 {
+      font-weight: bold;
+    }
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      color: #fff;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="Logo" width="25%"></a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="holidays.html">Holidays</a></li>
+        <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+        <li class="nav-item"><a class="nav-link active" href="flights.html">Flights</a></li>
+        <li class="nav-item"><a class="nav-link" href="loyalty.html">Loyalty</a></li>
+        <li class="nav-item"><a class="nav-link " href="gift cards.html">Gift Cards & Offers</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-dark">Search</button>
+      </form>
+      <li class="nav-item"><a class="nav-link p-4" href="login.html"><i class="bi bi-person-circle"></i></a></li>
+
+    </div>
+  </div>
+</nav>
+<!-- Flight Banner -->
+  <section class="flight-banner text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Book Flight Tickets</h2>
+      <div class="search-box mx-auto">
+        <!-- Radio buttons -->
+        <div class="mb-3">
+          <label class="me-3"><input type="radio" name="trip" checked> Round Trip</label>
+          <label class="me-3"><input type="radio" name="trip"> One way</label>
+          <label><input type="radio" name="trip"> Multi-City</label>
+        </div>
+        <!-- Search form -->
+        <div class="row g-2">
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="From: City or Airport Code">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="To: City or Airport Code">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Depart On - Return on">
+          </div>
+          <div class="col-md-2">
+            <select class="form-control">
+              <option>1 Adult, Economy</option>
+              <option>2 Adults, Economy</option>
+              <option>1 Adult, Business</option>
+            </select>
+          </div>
+          <div class="col-md-1 d-grid">
+            <button type="button">search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Section -->
+  <section class="promo-section">
+    <div class="container">
+      <div class="row align-items-center text-center">
+        <div class="col-md-4">
+          <img src="images/girl2.jpeg" alt="Flights Update">
+          <p class="fw-bold mb-0">Flights Update</p>
+        </div>
+        <div class="col-md-4">
+          <h5>APPLY CODE - <span class="text-danger">TCFESTIVAL</span></h5>
+          <button class="discount-btn">DISCOUNT UPTO ₹750</button>
+        </div>
+        <div class="col-md-4">
+          <h5>REDEEM LOYALTY POINTS</h5>
+          <button class="discount-btn">DISCOUNT UPTO ₹750</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Top India Destinations -->
+<section class="py-4">
+  <div class="container">
+    <h5 class="fw-bold mb-3">Top India Destination for you</h5>
+    <div class="row g-3">
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_328355664_m3g4xP0ggmSe1cY5m6yIeBz2GDXNLA4x.png" alt="Cochin">
+          <p>Cochin Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1238567110_cKRm9EB4vxt3may6WI0F4maYhPuJAXoB.png" alt="Chennai">
+          <p>Chennai Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1298100180_COE8IF7M23XV9EHhCg22T5VXESdaqyWU.png" alt="Mumbai">
+          <p>Mumbai Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1288710713_0OXrILJ8NMPYaVVX6gHJbt0hilfmIbdF.png" alt="Jaipur">
+          <p>Jaipur Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1425136400_OrTHom4ZzrXWwMA3ojSxHv2xX008PjjP.png" alt="Ahmedabad">
+          <p>Ahmadabad Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1265634239_zFls7d3eDm5YCK5UJfgU3uP4WXrZqvz9.png" alt="delhi">
+          <p>Delhi Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1206669427_9E2FKPnl7MLtbaDmvZs7RgV6tDU2UuAw (1).png" alt="guwahati">
+          <p>Guwahati Flights</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="images/240_F_1208791777_B9Uw9gtgozVT9YQzG2DRFbOeca2qyoIq.png" alt="Delhi">
+          <p>Delhi Flights</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- Top International Destination Section -->
+<div class="container my-5">
+  <h5 class="fw-bold mb-3">Top International Destination for you</h5>
+  <p>
+    Thomas Cook enables customers to efficiently book flights to approximately 70 plus destinations in the country. 
+    The top domestic destinations include...
+    <a href="#">read more</a>
+  </p>
+
+  <div class="row g-3">
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_1171973536_HEZKavIUFPs9ikyMj2WRtpvuZazX62xC.png" class="card-img-top" alt="Cochin Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Cochin Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_1443508704_9qwMumNp77kZpfpD6jj4oOyZm4agcfAK.png" class="card-img-top" alt="Chennai Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Chennai Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_1377232081_gSwi8tNMebPUOgfccRhkhg55jPRzAOE5.png" class="card-img-top" alt="Mumbai Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Mumbai Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_1178213346_Dq6ETOJRY9qSmzmf4oIP5cNjppQ2aFsD.png" class="card-img-top" alt="Jaipur Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Jaipur Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_278401387_ntGYeVEUmyZdgHK8e9oeveGUrMVmmTqQ.png" class="card-img-top" alt="Ahmedabad Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Ahmedabad Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_246682963_48E9vlnFNCjRuUkZ0diZMa8RADz7hGOc.png" class="card-img-top" alt="Delhi Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Delhi Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_586754231_1WNzCzoL5UfND11nh0xPE3uPdrjIBZQt.png" class="card-img-top" alt="Guwahati Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Guwahati Flights</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="images/240_F_304816187_3jEkP84ARSoqc97BjtCHOa9JeaENEkq7.png" class="card-img-top" alt="Delhi Flights">
+        <div class="card-body text-center p-2">
+          <p class="mb-0">Delhi Flights</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Booking Info Section -->
+<div class="container my-5">
+  <p><b>
+    Book International and Domestic Flight Tickets from the Comfort of your home
+  </b></p>
+  <p>
+    Over the last decade, there has been a significant spike in the number of airline flyers. 
+    Given the rise in the trend of air travel, prices are becoming more competitive at the various global tourist 
+    locations, and we know that an ideal flight ticket booking strategy plays a major role in cutting travel costs. 
+    <a href="#">read more</a>
+  </p>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Logo -->
+      <div class="col-md-3 mb-3">
+        <img src="images/logo.jpg" alt="Logo" class="mb-2" width="55px">
+        <p>INTERNATIONAL<br>
+         BOOKING</p>
+      </div>
+      <!-- Links -->
+      <div class="col-md-3 mb-3">
+        <h6>ONLINE SHOPPING</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Holidays</a></li>
+          <li><a href="#">Flight</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Visa Process</a></li>
+          <li><a href="#">Gift card</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-3">
+        <h6>USEFUL LINKS</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">T&C</a></li>
+          <li><a href="#">Booking</a></li>
+          <li><a href="#">Cancellation</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Return / Refunds</a></li>
+          <li><a href="#">Payments</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="col-md-3 mb-3">
+        <h6>CONTACT US</h6>
+        <p>
+          Manek Ratna<br>
+          3rd Floor, Block No 304,<br>
+          Raja Arcade, Zaveri Road,<br>
+          Malad (West), Maharashtra, Mumbai - 400064<br>
+          <i class="fa fa-phone"></i> +91 8291843091<br>
+          <i class="fa fa-envelope"></i> info@manekratna.com
+        </p>
+      </div>
+    </div>
+    <hr class="bg-light">
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="mb-0">© 2021-2025 www.Manekratna.com All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
